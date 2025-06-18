@@ -1,0 +1,25 @@
+name: Deploy map.html to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Remplacez par le nom de votre branche principale si différent
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v1
+
+      - name: Upload map.html
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'map.html'  # Chemin vers votre fichier map.html
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
