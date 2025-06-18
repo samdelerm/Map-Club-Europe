@@ -1,0 +1,204 @@
+body {
+        background-color: #06bcd0;
+    }
+    /* Style de la carte */
+    #carte {
+        width: 80%;
+        height: 80vh;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        flex: 1;
+    }
+    
+    h1{
+        font-size: 5em;
+        font-style: oblique;
+        text-align: center;
+
+    }
+    p{
+        font-size: 2.5em;
+        text-align: center;
+        font-style: oblique;
+    }
+    
+    /* Style pour la fenêtre contextuelle */
+    .popup {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+        pointer-events: none;
+        font-size: 20px;
+    }
+
+    /* Style des pays */
+    .pays {
+        cursor: pointer;
+        transition: fill 0.3s;
+        fill: aliceblue;
+    }
+
+    .pays.Espagne{
+        fill :#A37BF8;
+    }
+    .pays.Italie {
+        fill: #F6ABAF;
+    }
+    .pays.france {
+        fill: #A37BF8;
+    }
+    .pays.Luxembourg{
+        fill: #A37BF8;
+    }
+    .pays.Belgique{
+        fill: #A37BF8;
+    }
+    .pays.allemagne{
+        fill: #F6ABAF;
+    }
+    .pays.irlande{
+        fill: #A37BF8;
+    }
+    .pays.Portugal{
+        fill: #F6ABAF;
+    }
+    .pays.Pays-Bas{
+        fill: #A37BF8;
+    }
+    .pays.finlande{
+        fill: #A37BF8;
+    }
+    .pays.danemark{
+        fill: #A37BF8;
+    }
+    .pays.Autriche{
+        fill: #F6ABAF;
+    }
+    .pays.slovenie{
+        fill: #F6ABAF;
+    }
+    .croatie{
+        fill: #F6ABAF;
+    }
+    .pays.lituanie{
+        fill: #F6ABAF;
+    }
+    .pays.estonie{
+        fill: #F6ABAF;
+    }
+    .pays.lettonie{
+        fill: #F6ABAF;
+    }
+    .pays.Bulgarie{
+        fill: #F6ABAF;
+    }
+    .pays.Grece{
+        fill: crimson;
+    }
+    .pays.chypre{
+        fill: crimson;
+    }
+    .pays.roumanie{
+        fill: crimson;
+    }
+    .pays.hongrie{
+        fill: crimson;
+    }
+    .pays.slovaquie{
+        fill: crimson;
+    }
+    .pays.tchequie{
+        fill: crimson;
+    }
+    .pays.pologne{
+        fill: crimson;
+    }
+    .pays.candidate{
+        fill: darkgreen;
+    }
+    .pays.suede{
+        fill : #6A0DAD;
+    }
+
+    /* Ajout d'un style pour .pays.UK avec un remplissage rayé noir */
+    .pays.UK {
+        fill: url(#stripedPattern);
+    }
+
+    /* Suppression des éléments SVG incorrects */
+    /* Correction des styles pour la légende */
+    #legende {
+        margin: 20px auto;
+        width: 80%;
+        text-align: center;
+        flex: 1;
+        max-width: 300px;
+    }
+
+    #legende ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #legende li {
+        margin: 5px 0;
+    }
+
+    #legende span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+    }
+
+    /* Couleurs spécifiques */
+    #legende .rouge {
+        background-color: crimson;
+    }
+
+    #legende .beige {
+        background-color: #F6ABAF;
+    }
+
+    #legende .violet-clair {
+        background-color: #A37BF8;
+    }
+
+    #legende .violet-fonce {
+        background-color: #6A0DAD;
+    }
+
+    #legende .vert-fonce {
+        background-color: darkgreen;
+    }
+
+    /* Modification pour placer la légende à côté du dessin SVG */
+    #carte-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    #moyenne-europeenne {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin: 20px auto;
+    }
+    #moyenne-europeenne .h2 {
+        font-size: 2em;
+        text-align: center;
+        margin-top: 20px;
+    } 
+footer{
+    p{
+        font-size: 1.5em;
+    }
+    
+}
