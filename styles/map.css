@@ -17,15 +17,6 @@ body {
         flex: 1 1 auto;
         aspect-ratio: 11/8;
         box-sizing: border-box;
-        border-radius: 32px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 0 #fff inset;
-        background: 
-            radial-gradient(circle at 60% 40%, #b3e0ff 0%, #6ec6e6 60%, #3a7ca5 100%),
-            url('data:image/svg+xml;utf8,<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg"><g opacity="0.13"><circle cx="200" cy="100" r="98" fill="none" stroke="white" stroke-width="2"/><circle cx="200" cy="100" r="60" fill="none" stroke="white" stroke-width="1.5"/><circle cx="200" cy="100" r="30" fill="none" stroke="white" stroke-width="1"/><line x1="0" y1="100" x2="400" y2="100" stroke="white" stroke-width="1.2"/><line x1="200" y1="0" x2="200" y2="200" stroke="white" stroke-width="1.2"/></g></svg>');
-        background-size: cover, 400px 200px;
-        background-repeat: no-repeat, repeat;
-        background-position: center, center;
-        transition: box-shadow 0.3s, background 0.5s;
     }
 @media (max-width: 700px) {
     #carte {
@@ -79,13 +70,11 @@ body {
     }
 
     .pays:hover, .pays:focus {
-        filter: drop-shadow(0 6px 24px #06bcd0) brightness(1.18) blur(0.5px);
-        transform: scale(1.04);
+        filter: drop-shadow(0 4px 16px #06bcd0) brightness(1.15);
+        transform: scale(1.03);
         stroke: #22223b;
         stroke-width: 2.5;
         z-index: 2;
-        opacity: 0.95;
-        transition: filter 0.2s, transform 0.2s, opacity 0.2s;
     }
 
     .pays.Espagne{
@@ -234,6 +223,25 @@ body {
 
     #carte {
         flex: 2 1 0;
+        border-radius: 32px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 0 #fff inset;
+        background: 
+            radial-gradient(circle at 60% 40%, #b3e0ff 0%, #6ec6e6 60%, #3a7ca5 100%),
+            url('data:image/svg+xml;utf8,<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg"><g opacity="0.13"><circle cx="200" cy="100" r="98" fill="none" stroke="white" stroke-width="2"/><circle cx="200" cy="100" r="60" fill="none" stroke="white" stroke-width="1.5"/><circle cx="200" cy="100" r="30" fill="none" stroke="white" stroke-width="1"/><line x1="0" y1="100" x2="400" y2="100" stroke="white" stroke-width="1.2"/><line x1="200" y1="0" x2="200" y2="200" stroke="white" stroke-width="1.2"/></g></svg>');
+        background-size: cover, 400px 200px;
+        background-repeat: no-repeat, repeat;
+        background-position: center, center;
+        transition: box-shadow 0.3s, background 0.5s;
+    }
+
+    .pays:hover, .pays:focus {
+        filter: drop-shadow(0 6px 24px #06bcd0) brightness(1.18) blur(0.5px);
+        transform: scale(1.04);
+        stroke: #22223b;
+        stroke-width: 2.5;
+        z-index: 2;
+        opacity: 0.95;
+        transition: filter 0.2s, transform 0.2s, opacity 0.2s;
     }
 
     #legende {
@@ -247,27 +255,25 @@ body {
         margin-top: 0;
         margin-left: 0;
         font-size: 1.1em;
+        text-align: left;
     }
-
     #legende h2 {
         font-size: 1.3em;
         margin-bottom: 0.7em;
         color: #22223b;
+        text-align: center;
     }
-
     #legende ul {
         padding-left: 0;
         margin: 0;
         list-style: none;
     }
-
     #legende li {
         margin-bottom: 0.7em;
         display: flex;
         align-items: center;
         gap: 10px;
     }
-
     #legende span {
         display: inline-block;
         width: 22px;
