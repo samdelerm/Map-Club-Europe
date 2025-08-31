@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Le club Europe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le club Europe – Carte interactive des femmes remarquables</title>
     <link rel="icon" type="image/png" href="img.png">
     <link rel="stylesheet" href="styles/map.css">
-    <link rel="icon" type="image/png" href="img.png">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <meta name="description" content="Carte interactive présentant 54 femmes remarquables d'Europe, par pays, avec indice d'égalité 2025.">
 </head>
 <body>
-    <h1>54 Européennes remarquables d'hier et d'aujourd'hui</h1>
-    <p>carte interactive : cliquez sur chaque pays pour en connaitre deux femmes remarquables.</p>
+    <header class="header-carte">
+        <div></div>
+        <h1 class="titre-carte">54 Européennes remarquables d'hier et d'aujourd'hui</h1>
+        <img src="img.png" alt="Logo Club Europe" class="logo-carte" aria-label="Logo Club Europe" />
+    </header>
+    <p id="intro">Carte interactive&nbsp;: cliquez ou naviguez au clavier sur chaque pays pour découvrir deux femmes remarquables.</p>
+    <main>
     <div id="carte-container">
-    <svg xmlns="http://www.w3.org/2000/svg" baseprofile="tiny" fill="#ececec" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".9" version="1.2" id="carte" viewBox="0 0 1100 800" width="100%" height="100%">
+    <svg xmlns="http://www.w3.org/2000/svg" baseprofile="tiny" fill="#ececec" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".9" version="1.2" id="carte" viewBox="0 0 1100 800" width="100%" height="100%" aria-label="Carte de l'Europe interactive, cliquez sur un pays pour découvrir deux femmes remarquables" role="img" tabindex="0">
             <defs>
                 <pattern id="stripedPattern" patternUnits="userSpaceOnUse" width="10" height="10">
                     <rect width="10" height="10" fill="aliceblue" />
@@ -20,9 +27,9 @@
             </defs>
             <path class="" data-pays="Albanie" d="M654.7 528.1l0.5 0.4 2 2.9 1.4 0.5 1.9 1.3 1.4 3.2 0.1 2.2-0.5 2.6 0.3 2.1-0.8 0.8 0.7 2 0.2 1.9 1.2 2.2 1.2 1.1 1.3 2.4 1.6-0.2 1.3 1.1 0 1.1 1.1 1.8-0.8 2.6-1.7 0.8-1.2 3.1-0.3 2-0.6 0.5-1.9 0.3-1.7 1.3 1 2.2-0.9 0.7-0.3 1.5-0.7 0.7-2.7-0.9-0.7-2.5-1.7-2.7-4.9-2.6-1.2-1.1 0.4-1.5-0.1-1.4-1.4-2.4 0.3-2.6 0.8-2.2-0.3-2.7 0.1-2.1-0.7-2.9 0.5-2.1 0.9-1.3-0.2-2.2-1.5-1.1-1.6-0.2 0-3.1-0.3-0.6 1.7 0-1.7-2.8 3.2-5.3 1.1 0.3 0.8 2.1 3.4-1.2z" id="AL" name="Albania">
             </path>
-            <path class="pays andorre"data-pays="Andorre" d="M423.4 528.8l-2.8 1.1-0.7-0.4 0-2.1 0.9-0.7 2.6 0.6 0 1.5z" id="AD" name="Andorra">
+            <path class="pays andorre" data-pays="Andorre" d="M423.4 528.8l-2.8 1.1-0.7-0.4 0-2.1 0.9-0.7 2.6 0.6 0 1.5z" id="AD" name="Andorra" tabindex="0">
             </path>
-            <path class="pays Armenie" data-pays="Arménie" d="M974.6 572.4l-3.2-2.8-2.3-1.7-1.6-0.7-3.5 0.4-2.9-0.9-1.8-0.9 0.5-0.6-1.9-3-0.8-1.9 1-1.4 0.2-2.3-1.7-3.3-1.7-1.2-1.3-1.6 4.4-0.3 5.3-1.3 3.2 0.3 1.1-0.2 3.5-0.1-0.5-0.7 2.3-0.5 1.3 1.5 1.6 1-0.9 0.9 2.3 1 1.2 0 3.3 2.5 0 0.7-1.9 1.5-0.2 1.1 3.2 3.4 2.4 1.4 3.2 1.5 0.2 0.9-0.9 2.5-3 0 0.6 0.9 1.9 1.2 6.1 4.4 1.5-0.3 2.2 0.9 0.2 1.3-1 1.4 1.9 1.4 0.8 1.5-1.8 0.5 1.4 1.5 0.5 2.6-2.2-0.1-2.5 0.5-3-4.7 0.1-1-3.1-2.1 0.1-1.7-0.8-1.2-1.7 0.2-1.9 0.9-2.9-1.6-1.2 0.2-0.3-1.1-1.8-1.7-3.2 0.9z" id="AM" name="Armenia">
+            <path class="pays Armenie" data-pays="Arménie" d="M974.6 572.4l-3.2-2.8-2.3-1.7-1.6-0.7-3.5 0.4-2.9-0.9-1.8-0.9 0.5-0.6-1.9-3-0.8-1.9 1-1.4 0.2-2.3-1.7-3.3-1.7-1.2-1.3-1.6 4.4-0.3 5.3-1.3 3.2 0.3 1.1-0.2 3.5-0.1-0.5-0.7 2.3-0.5 1.3 1.5 1.6 1-0.9 0.9 2.3 1 1.2 0 3.3 2.5 0 0.7-1.9 1.5-0.2 1.1 3.2 3.4 2.4 1.4 3.2 1.5 0.2 0.9-0.9 2.5-3 0 0.6 0.9 1.9 1.2 6.1 4.4 1.5-0.3 2.2 0.9 0.2 1.3-1 1.4 1.9 1.4 0.8 1.5-1.8 0.5 1.4 1.5 0.5 2.6-2.2-0.1-2.5 0.5-3-4.7 0.1-1-3.1-2.1 0.1-1.7-0.8-1.2-1.7 0.2-1.9 0.9-2.9-1.6-1.2 0.2-0.3-1.1-1.8-1.7-3.2 0.9z" id="AM" name="Armenia" tabindex="0">
             </path>
             <path class="pays Autriche" data-pays="Autriche" d="M607.8 434.9l-0.9 2.4 0.1 0.8 1.6 2.9 2.3 2.9-0.6 0.7-0.6 1.9 0.7 2-3.9 0.3-2.5-0.9-1.3 1.4 2.6 0.7 0.5 1.1-0.5 1.4-2.2 1.2 0.4 1.5-0.5 0.7 1.1 1.6-0.3 1.8-2.5 0.5-1.8 1.7-1.3 0.9-0.1 1.9-2.4-0.5-1.6 0.2-2.3 1.1-2.8-0.2-2.6 0.2-1.9 0.7-1 1.3-3 1.2-5-0.7-5-0.9-2.6-0.5-4-0.3-8.6-1.5-1.1-0.5-3.1-3.5 0-2.3-4.7 1.5-3.1-0.2-3.4 0.3-1.4 0.6-1.2 2.2-1.1 0.4-2.1-0.4-0.9-0.8-3-0.3-0.5-1.5-0.8-0.3-2 1.9-2.3-0.4-1.5-0.8-0.4-1-3.3-0.8 0.3-0.8-1.1-2.5 1-3-0.9-0.7 1.7-0.5 0.7-0.5 3.5 1.6 0.9 1.4 1.2 0.3-0.1 1.3 1.6-0.5 1-1.6 0.2-1.9 2.8-0.1 2.7 0.4 1.4 1.9 3.8-0.5 1.1-0.9 3.9-1.5 5.7-0.5 0.1-1.4 2 0.3 1.5 0.8 2.5-0.5 1.1 0.5 0.2 1.1 1.2 0.9 1.7 0.4 0.3-1.5-0.3-1.9-1.7-0.3 0.6-1.3-0.1-1.3-2.5-2.8 0.6-1.3 3.1-1.8 2.9-0.8 1-1 0.7-2.9 2.3 0.9 1.3-0.9 0.2-2.8 2.2 1.2 0.8 1.3 3.9 0.4 1.4-0.7 2.5 0.4 0.1-1.1 1.3-1.6 1.2 0 0.3-3.2 1.2-0.2 1.6 0.8 1.4-0.4 4.8 1.7 1.5-0.1 3 1.7 3.8 0.2 1.2-0.9 5.1 1.5 1 1.6z" id="AT" name="Austria">
             </path>
@@ -115,32 +122,29 @@
             <circle cx="521" cy="266.6" id="2">
             </circle>
         </svg>
-        <div id="moyenne-europeenne">
+
+        <div id="moyenne-europeenne" aria-live="polite">
             <h2>Moyenne de l'UE : 68,6</h2>
-            
-            
-        <!-- Fenêtre contextuelle -->
         </div>
-        <div class="popup" id="popup"></div>
-        <div id="legende">
+        <div id="legende" aria-label="Légende des couleurs de la carte">
             <h2>Indice de respect des droits de la femme</h2>
             <ul>
-                <li><span class="rouge"></span> Rouge : 50-59.9</li>
-                <li><span class="beige"></span> Beige : 60-69.9</li>
-                <li><span class="violet-clair"></span> Violet clair : 70-79.9</li>
-                <li><span class="violet-fonce"></span> Violet foncé : 80+</li>
-
-                
+                <li><span class="crimson" aria-label="Rouge"></span> Rouge : 50-59,9</li>
+                <li><span class="rose" aria-label="Rose"></span> Rose : 60-69,9</li>
+                <li><span class="violet-clair" aria-label="Violet clair"></span> Violet clair : 70-79,9</li>
+                <li><span class="violet-fonce" aria-label="Violet foncé"></span> Violet foncé : 80+</li>
+                <li><span class="vert-fonce" aria-label="Vert foncé"></span> Candidat : pays non membre</li>
             </ul>
         </div>
-        
     </div>
+    </main>
+    <div class="popup" id="popup" role="tooltip" aria-hidden="true" style="display:none;"></div>
     <script src="scripts/map.js"></script>
 </body>
 <footer>
-    <p>résultats de l'indice d'égalité des genres en 2025</p>
-    <p>indice basé sur plusieurs indicateurs : niveau d'éducation, participation au marché du travail, ressources financières, santé et violence.</p>
-    <p>source: institut européene pour l'égalité entre les hommes et les femmes</p>
-    <h6> style="text-align: center;">créé par Samuel Legrand, en classe de 1CIEL, 2025</h6>
+    <p>Résultats de l'indice d'égalité des genres en 2025</p>
+    <p>Indice basé sur plusieurs indicateurs : niveau d'éducation, participation au marché du travail, ressources financières, santé et violence.</p>
+    <p>Source : Institut européen pour l'égalité entre les hommes et les femmes</p>
+    <div class="footer-signature">Créé par Samuel Legrand, 1CIEL, 2025</div>
 </footer>
 </html>
